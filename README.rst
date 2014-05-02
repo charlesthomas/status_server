@@ -26,3 +26,14 @@ What if you want a randomly chosen value from a list of possible return types?
 
 The above has an equal chance of returning either of the three HTTP status
 codes. (1/3: 200, 1/3: 404, 1/3: 503)
+
+status_server supports all standard methods for requests:
+
+``curl -iX POST http://localhost:8888/200``
+
+``curl -iX DELETE http://localhost:8888/200``
+
+Known Issue
+-----------
+304 (Not Modified) does **not** work. ``curl http://localhost:8888/304 will
+throw an exception and return a 500, not a 304.
