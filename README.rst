@@ -35,5 +35,5 @@ status_server supports all standard methods for requests:
 
 Known Issue
 -----------
-304 (Not Modified) does **not** work. ``curl http://localhost:8888/304 will
+304 (Not Modified) does **not** work. ``curl http://localhost:8888/304`` will
 throw an exception and return a 500, not a 304.
